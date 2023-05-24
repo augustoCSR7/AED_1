@@ -20,7 +20,7 @@ Complex addComplex(Complex complex1, Complex complex2) {
     return result;
 }
 
-Complex subtractComplex(Complex complex1, Complex complex2) {
+Complex subComplex(Complex complex1, Complex complex2) {
     Complex result;
     result.real = complex1.real - complex2.real;
     result.imag = complex1.imag - complex2.imag;
@@ -40,21 +40,4 @@ Complex divideComplex(Complex complex1, Complex complex2) {
     result.real = ((complex1.real * complex2.real) + (complex1.imag * complex2.imag)) / divisor;
     result.imag = ((complex1.imag * complex2.real) - (complex1.real * complex2.imag)) / divisor;
     return result;
-}
-
-int main() {
-    Complex complex1 = createComplex(2.0, 3.0);
-    Complex complex2 = createComplex(4.0, -1.0);
-
-    Complex sum = addComplex(complex1, complex2);
-    Complex subtraction = subtractComplex(complex1, complex2);
-    Complex multiplication = multiComplex(complex1, complex2);
-    Complex division = divideComplex(complex1, complex2);
-
-    printf("Sum: %.2f + %.2fi\n", sum.real, sum.imag);
-    printf("Subtraction: %.2f + %.2fi\n", subtraction.real, subtraction.imag);
-    printf("Multiplication: %.2f + %.2fi\n", multiplication.real, multiplication.imag);
-    printf("Division: %.2f + %.2fi\n", division.real, division.imag);
-
-    return 0;
 }
